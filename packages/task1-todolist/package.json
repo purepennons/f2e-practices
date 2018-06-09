@@ -11,7 +11,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "styleguide": "styleguidist server",
+    "styleguide:build": "styleguidist build"
   },
   "browserslist": {
     "development": [
@@ -25,5 +27,8 @@
       "Firefox ESR",
       "not ie < 11"
     ]
+  },
+  "devDependencies": {
+    "react-styleguidist": "^7.0.17"
   }
 }
