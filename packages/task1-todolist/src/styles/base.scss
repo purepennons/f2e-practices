@@ -1,0 +1,40 @@
+@import 'reset-css/sass/_reset.scss';
+@import './_variables.scss';
+@import 'sass-rem';
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: $backgroundColor;
+}
+
+h1 {
+  font-family: Roboto-Medium;
+  font-size: rem(24px);
+  color: $pureBlack;
+}
+
+h2 {
+  font-family: Roboto-Medium;
+  font-size: rem(20px);
+  color: $pureBlack;
+}
+
+p {
+  font-family: Roboto-Regular;
+  font-size: rem(16px);
+  color: $pureBlack;
+  line-height: rem(24px);
+}
+
+input:placeholder, .remark {
+  font-family: Roboto-Regular;
+  font-size: rem(16px);
+  color: $darkGary;
+  line-height: rem(24px);
+}
+
+.status {
+  font-family: Roboto-Italic;
+  font-size: rem(24px);
+  color: $gray;
+}

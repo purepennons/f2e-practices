@@ -5,15 +5,15 @@
   "dependencies": {
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
-    "react-scripts": "2.0.0-next.66cc7a90"
+    "react-scripts": "2.0.0-next.66cc7a90",
+    "reset-css": "^4.0.1",
+    "sass-rem": "^2.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "styleguide": "styleguidist server",
-    "styleguide:build": "styleguidist build"
+    "eject": "react-scripts eject"
   },
   "browserslist": {
     "development": [
@@ -29,6 +29,6 @@
     ]
   },
   "devDependencies": {
-    "react-styleguidist": "^7.0.17"
+    "node-sass": "^4.9.0"
   }
 }
