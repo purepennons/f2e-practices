@@ -13,7 +13,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "styleguide": "styleguidist server",
+    "styleguide:build": "styleguidist build"
   },
   "browserslist": {
     "development": [
@@ -29,6 +31,7 @@
     ]
   },
   "devDependencies": {
-    "node-sass": "^4.9.0"
+    "node-sass": "^4.9.0",
+    "react-styleguidist": "6.5.3"
   }
 }
