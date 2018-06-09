@@ -3,12 +3,19 @@
 @import './_fonts.scss';
 @import 'sass-rem';
 
-
 body {
   background-color: $backgroundColor;
 }
 
-body, h1, h2, h3, h4, div, span, p, input {
+body,
+h1,
+h2,
+h3,
+h4,
+div,
+span,
+p,
+input {
   font-family: 'Roboto', sans-serif;
 }
 
@@ -31,7 +38,8 @@ p {
   line-height: rem(24px);
 }
 
-input:placeholder, .remark {
+input:placeholder,
+.remark {
   font-weight: $regular;
   font-size: rem(16px);
   color: $darkGary;
