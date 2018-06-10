@@ -44,6 +44,22 @@ class Application extends Component {
     actions.editTodo(id, obj);
   };
 
+  getFilteredTodos() {
+    const {
+      todosState: { todos }
+    } = this.props;
+    switch (this.state.selected) {
+      case 'all':
+        return todos;
+      case 'doing':
+        return todos.filter(todo => !todo.isDone);
+      case 'done':
+        return todos.filter(todo => todo.isDone);
+      default:
+        return todos;
+    }
+  }
+
   renderHeader() {
     const { selected } = this.state;
     return (
@@ -95,10 +111,9 @@ class Application extends Component {
   }
 
   renderTodos() {
-    const { todosState } = this.props;
     return (
       <div className={cx('todos')}>
-        {todosState.todos.map(todo => (
+        {this.getFilteredTodos().map(todo => (
           <Todo
             key={todo.id}
             id={todo.id}
