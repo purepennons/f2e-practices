@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { noop, isString, merge, uniqueId, pick, isObject } from 'lodash';
+import { noop, isString, merge, uniqueId, pick, isObject, orderBy } from 'lodash';
 
 export const cx = React.createContext('todos');
 
@@ -65,7 +65,7 @@ class Provider extends Component {
       if (todo.id !== id) return todo;
       return merge(todo, pruneTodo(obj));
     });
-    this.setState({ todos: newTodos });
+    this.setState({ todos: orderBy(newTodos, ['isImportant'], ['desc']) });
   }
 
   render() {

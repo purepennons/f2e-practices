@@ -44,11 +44,11 @@ class Application extends Component {
     actions.editTodo(id, obj);
   };
 
-  getFilteredTodos() {
+  getFilteredTodos(type) {
     const {
       todosState: { todos }
     } = this.props;
-    switch (this.state.selected) {
+    switch (type) {
       case 'all':
         return todos;
       case 'doing':
@@ -112,8 +112,8 @@ class Application extends Component {
 
   renderTodos() {
     return (
-      <div className={cx('todos')}>
-        {this.getFilteredTodos().map(todo => (
+      <main className={cx('todos')}>
+        {this.getFilteredTodos(this.state.selected).map(todo => (
           <Todo
             key={todo.id}
             id={todo.id}
@@ -130,8 +130,16 @@ class Application extends Component {
             // onEdit
           />
         ))}
-      </div>
+      </main>
     );
+  }
+
+  renderFooter() {
+    return (
+      <footer className={cx('status', 'footer')}>
+        {`${this.getFilteredTodos('doing').length} tasks left`}
+      </footer>
+    )
   }
 
   render() {
@@ -140,6 +148,7 @@ class Application extends Component {
         {this.renderHeader()}
         {this.renderInput()}
         {this.renderTodos()}
+        {this.renderFooter()}
       </>
     );
   }
