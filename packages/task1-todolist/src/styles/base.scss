@@ -3,6 +3,10 @@
 @import './_fonts.scss';
 @import 'sass-rem';
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: $backgroundColor;
 }
