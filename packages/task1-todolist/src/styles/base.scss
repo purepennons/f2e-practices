@@ -19,7 +19,7 @@ input {
   font-family: 'Roboto', sans-serif;
 }
 
-h1 {
+h1, .title {
   font-weight: $medium;
   font-size: rem(24px);
   color: $pureBlack;

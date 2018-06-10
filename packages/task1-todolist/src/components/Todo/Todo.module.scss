@@ -1,0 +1,124 @@
+@import '../../styles/_variables.scss';
+@import '../../styles/_mixin.scss';
+@import 'sass-rem';
+
+.icon {
+  margin: 0 0.8%;
+  
+  svg {
+    color: $darkGary;
+  }
+}
+
+.todo {
+  width: 60.5%;
+  height: 8.4%;
+  background-color: $lightGray;
+  border-radius: 3px;
+  padding: 24px 32px 17px 72px;
+  position: relative;
+  transition: all .5s;
+}
+
+.main {
+  @include flex-row-nowrap();
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+
+  .todo-title {
+    @include ellipsis(rem(248px));
+    height: rem(28px);
+    line-height: rem(28px);
+  }
+
+  .todo-operations {
+    @include flex-row-nowrap();
+    justify-content: flex-start;
+    align-items: center;
+    min-width: 48px;
+    
+    .star {
+      font-size: rem(22px);
+      line-height: rem(22px);
+      color: $pureBlack;
+      cursor: pointer;
+    }
+
+    .pencil-icon {
+      margin-left: 32px;
+      cursor: pointer;
+
+      svg {
+        color: $pureBlack;
+        height: 24px;
+      }
+    }
+  }
+}
+
+.hint {
+  svg {
+    height: 18px;
+  }
+}
+
+.todo-checkbox {
+  position: absolute;
+  top: 24px;
+  left: 32px;
+
+  .checkbox {
+    display: block;
+    width: 24px;
+    height: 24px;
+    border-radius: 3px;
+    background-color: $pureWhite;
+    transition: background-color .5s;
+    cursor: pointer;
+  
+    svg {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      color: $pureWhite;
+      opacity: 0;
+      transition: opacity .5s;
+    }
+  }
+  
+  input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+  }
+  
+  input[type="checkbox"]:checked ~ .checkbox {
+    background-color: $primaryBlue;
+
+    svg {
+      opacity: 1;
+    }
+  }
+}
+
+.todo.important {
+  background-color: $lightOrange;
+  
+  .star {
+    color: $hintYellow;
+  }
+}
+
+.todo.done {
+  height: 7.4%;
+
+  .main {
+    .todo-title {
+      color: #9B9B9B;
+      text-decoration: line-through;
+    }
+  }
+}

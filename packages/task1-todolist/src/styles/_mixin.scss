@@ -1,0 +1,28 @@
+@mixin flex-row-nowrap() {
+  display: flex;
+  flex-flow: row nowrap
+}
+
+@mixin flex-row-wrap() {
+  display: flex;
+  flex-flow: row wrap
+}
+
+@mixin flex-col-nowrap() {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+@mixin flex-col-wrap() {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+@mixin ellipsis($maxWidth) {
+  display: inline-block;
+  max-width: $maxWidth;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+}
