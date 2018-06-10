@@ -14,9 +14,10 @@
   width: 60.5%;
   height: 8.4%;
   background-color: $lightGray;
-  border-radius: 3px;
+  border-radius: 5px;
   padding: 24px 32px 17px 72px;
   position: relative;
+  margin: 0.8% auto;
   transition: all .5s;
 }
 
@@ -72,7 +73,7 @@
     display: block;
     width: 24px;
     height: 24px;
-    border-radius: 3px;
+    border-radius: 5px;
     background-color: $pureWhite;
     transition: background-color .5s;
     cursor: pointer;
