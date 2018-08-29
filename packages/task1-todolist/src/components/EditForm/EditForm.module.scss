@@ -1,0 +1,134 @@
+@import '../../styles/_variables.scss';
+@import 'sass-rem';
+
+.icon {
+  svg {
+    height: 18px;
+    color: $pureBlack;
+  }
+}
+
+.form-container {
+  width: 60.5%;
+  margin: 0 auto;
+  border-top: 2px solid $gray;
+  box-shadow: 0 3px 3px 0 rgba(116, 111, 111, 0.76);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.edit-form {
+  background-color: $lightGray;
+  width: 100%;
+  padding: 2% 7.6% 0 7.6%;
+
+  .title {
+    margin: 20px 0 10px 0;
+
+    label {
+      margin-left: 1.1%;
+    }
+  }
+
+  .input-area {
+    margin-left: 20px;
+
+    input,
+    textarea {
+      border: none;
+      outline: none;
+      border-radius: 2px;
+      padding: 8px 16px;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    input[type='date'],
+    input[type='time'] {
+      height: 35px;
+      width: 45%;
+    }
+    
+    input[type='time'] {
+      margin-left: 10px;
+      width: 40%;
+    }
+
+    input[type='file'] {
+      opacity: 0;
+      position: absolute;
+
+      & ~ .upload-btn {
+        border: none;
+        width: 32px;
+        height: 32px;
+        background-color: $gray;
+        border-radius: 3px;
+        position: relative;
+        cursor: pointer;
+
+        svg {
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          margin: auto;
+          color: $pureWhite;
+        }
+      }
+    }
+
+    textarea {
+      resize: none;
+      width: 100%;
+      height: 120px;
+      border-radius: 5px;
+      margin-bottom: 24px;
+    }
+
+    .form-file-desc, .upload-btn {
+      display: inline-block;
+    }
+
+    .form-file-desc {
+      em {
+        color: $darkGary;
+      }
+    }
+
+    .upload-btn {
+      margin-left: 23px;
+    }
+  }
+}
+
+.button-group {
+  button {
+    width: 50%;
+    height: 60px;
+    font-size: rem(24px);
+    font-weight: $regular;
+    text-align: center;
+    border: none;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+  }
+
+  svg {
+    margin-right: 14px;
+  }
+
+  .cancel {
+    color: $warningRed;
+    background-color: $pureWhite;
+  }
+
+  .save {
+    color: $pureWhite;
+    background-color: $primaryBlue;
+  }
+}

@@ -29,13 +29,13 @@ h1, .title {
   color: $pureBlack;
 }
 
-h2 {
+h2, .sub-title {
   font-weight: $medium;
   font-size: rem(20px);
   color: $pureBlack;
 }
 
-p {
+p, .text {
   font-weight: $regular;
   font-size: rem(16px);
   color: $pureBlack;

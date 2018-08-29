@@ -5,6 +5,7 @@ initialState = {
 };
 
 <Todo
+  id="a-todo"
   isDone={state.isDone}
   isImportant={state.isImportant}
   desc="這是我的一個測試的代辦事項"
