@@ -1,0 +1,31 @@
+{
+  "devDependencies": {
+    "lerna": "^2.9.0"
+  },
+  "name": "react-practice",
+  "version": "0.0.0",
+  "description": "react practice",
+  "main": "index.js",
+  "scripts": {
+    "lerna:install": "./node_modules/lerna/bin/lerna.js bootstrap",
+    "lerna:test": "CI=true ./node_modules/lerna/bin/lerna.js run test",
+    "lerna:publish": "./node_modules/lerna/bin/lerna.js publish --conventional-commits --cd-version=$LERNA_LEVEL --yes --skip-npm",
+    "test": "npm run lerna:test",
+    "publish-all": "npm run lerna:publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "react",
+    "redux",
+    "boilerplate"
+  ],
+  "author": "Akiya Lin",
+  "license": "ISC",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": ""
+}

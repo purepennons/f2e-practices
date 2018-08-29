@@ -1,0 +1,21 @@
+{
+  "lerna": "2.9.0",
+  "packages": [
+    "packages/*"
+  ],
+  "version": "0.0.0",
+  "changelog": {
+    "labels": {
+      "enhancement": "Enhancement",
+      "bug": "Bug Fix",
+      "feature": "Feature"
+    },
+    "cacheDir": ".changelog"
+  },
+  "npmClient": "yarn",
+  "command": {
+    "publish": {
+      "message": "publish npm packages by lerna [ci skip]"
+    }
+  }
+}
